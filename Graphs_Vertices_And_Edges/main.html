@@ -3,6 +3,44 @@
 <style>
 h1 { text-align: center; color: #00A2E8; }
 p { text-indent: 20px; text-align: justify; }
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .error {
+            color: #dc3545;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .question-error {
+            border-left: 3px solid #dc3545;
+            padding-left: 10px;
+        }
 </style>
 </head>
 
@@ -93,8 +131,10 @@ p { text-indent: 20px; text-align: justify; }
 <table border="0" align="center"><tr><td><img src="img/chess_graph2.png"></td></tr></table>
 <p>На старте два белых коня рядом, и два чёрных тоже рядом; а на финише цвета коней чередуются. Чтобы пройти от старта к финишу, в какой-то момент придётся поставить белого и чёрного коня на одно и то же поле, а это не разрешается шахматными правилами.</p>
 <p><b><font color="#00A2E8">Ответ:</font></b> нельзя.</p>
-<p>Как видите, многда графы позволяют очень просто решать довольно хитрые и необычные задачи.</p>
+<p>Как видите, иногда графы позволяют очень просто решать довольно хитрые и необычные задачи.</p>
+<form id="quizForm">
 <h1>Вопросы для самопроверки</h1>
+<div class="question" id="question-q1">
 <p>1. Выберите объекты и явления, которые можно представить в виде графа:</p>
 <p><input type="checkbox" name="q1" value="a1">аромат щей в тарелочке</p>
 <p><input type="checkbox" name="q1" value="a2">схема уборки квартиры роботом-пылесосом</p>
@@ -102,7 +142,196 @@ p { text-indent: 20px; text-align: justify; }
 <p><input type="checkbox" name="q1" value="a4">нахождение ответа на вопрос, что было раньше, курица или яйцо?</p>
 <p><input type="checkbox" name="q1" value="a5">чувства восьмиклассницы во время истерики</p>
 <p><input type="checkbox" name="q1" value="a6">водопровод в жилом доме</p>
+<p><div id="error-q1" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
+</div>
+<div class="question" id="question-q2">
+<p>2. Выберите правильный ответ на вопрос "Как называются линии, связывающие вершины графа?":</p>
+<p><input type="radio" name="q2" value="a1">ноги</p>
+<p><input type="radio" name="q2" value="a2">рёбра</p>
+<p><input type="radio" name="q2" value="a3">кости</p>
+<p><input type="radio" name="q2" value="a4">дороги</p>
+<p><input type="radio" name="q2" value="a5">пальцы</p>
+<p><div id="error-q2" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div>
+</div>
+<div class="question" id="question-q3">
+<p>3. Как можно проверить, одинаковы два графа или нет?</p>
+<p><input type="radio" name="q3" value="a1">наложить изображения графов в одном масштабе друг на друга</p>
+<p><input type="radio" name="q3" value="a2">вычислить площади графов и если они равны, то и графы равны</p>
+<p><input type="radio" name="q3" value="a3">сравнить количество вершин и количество исходящих из каждой вершины рёбер</p>
+<p><input type="radio" name="q3" value="a4">прочитать мысли учителя и выбрать среди них правильный ответ</p>
+<p><div id="error-q3" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
+</div>
+<div class="question" id="question-q4">
+<p>4. На рисунке изображён граф. Сколько у него рёбер, вершин, изолированных вершин?</p>
+<table border="0" align="center"><tr><td><img src="img/questions_graph1.png"></td></tr></table>
+<p><input type="radio" name="q4" value="a1">Рёбер=3, Вершин=3, Изолированных вершин=2</p>
+<p><input type="radio" name="q4" value="a2">Рёбер=4, Вершин=4, Изолированных вершин=1</p>
+<p><input type="radio" name="q4" value="a3">Рёбер=4, Вершин=5, Изолированных вершин=1</p>
+<p><input type="radio" name="q4" value="a4">Рёбер=5, Вершин=5, Изолированных вершин=1</p>
+<p><div id="error-q4" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
+</div>
+<div class="question" id="question-q5">
+<p>5. На рисунке изображён граф. Сколько у него рёбер, вершин, изолированных вершин?</p>
+<table border="0" align="center"><tr><td><img src="img/questions_graph2.png"></td></tr></table>
+<p><input type="radio" name="q5" value="a1">Рёбер=5, Вершин=7, Изолированных вершин=2</p>
+<p><input type="radio" name="q5" value="a2">Рёбер=5, Вершин=5, Изолированных вершин=2</p>
+<p><input type="radio" name="q5" value="a3">Рёбер=3, Вершин=3, Изолированных вершин=4</p>
+<p><input type="radio" name="q5" value="a4">Рёбер=3, Вершин=4, Изолированных вершин=3</p>
+<div id="error-q5" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
+</div>
+<p><button type="button" onclick="checkAnswers()">Показать результат</button></p>
+<p><div id="result" class="result"></div></p>
 
+<script>
+               // Обфусцированная конфигурация правильных ответов
+        const quizConfig = (function() {
+		
+            // Зашифрованные данные
+            const data = {
+                q1: { t: 'c', c: [0x32, 0x33, 0x36] },
+                q2: { t: 'r', c: [0x32] },
+				q3: { t: 'r', c: [0x33] },
+				q4: { t: 'r', c: [0x33] },
+				q5: { t: 'r', c: [0x31] },
+            };
+            
+            // Функция декодирования
+            const decode = (hexArray) => {
+                return hexArray.map(hex => 'a' + String.fromCharCode(hex));
+            };
+            
+            // Расшифровываем конфигурацию
+            const config = {};
+            for (const [key, value] of Object.entries(data)) {
+                config[key] = {
+                    type: value.t === 'c' ? 'checkbox' : 'radio',
+                    correctAnswers: decode(value.c)
+                };
+            }
+            
+            return config;
+        })();
+        
+        function checkAnswers() {
+            let allQuestionsAnswered = true;
+            
+            // Сбрасываем подсветку ошибок
+            document.querySelectorAll('.question').forEach(question => {
+                question.classList.remove('question-error');
+            });
+            document.querySelectorAll('.error').forEach(error => {
+                error.style.display = 'none';
+            });
+            
+            // Проверяем каждый вопрос
+            for (const questionId of Object.keys(quizConfig)) {
+                const inputs = document.querySelectorAll(`input[name="${questionId}"]`);
+                let hasAnswer = false;
+                
+                if (quizConfig[questionId].type === 'checkbox') {
+                    // Для чекбоксов - проверяем, что выбран хотя бы один
+                    hasAnswer = Array.from(inputs).some(input => input.checked);
+                } else if (quizConfig[questionId].type === 'radio') {
+                    // Для радио-кнопок - проверяем, что выбран один
+                    hasAnswer = Array.from(inputs).some(input => input.checked);
+                }
+                
+                if (!hasAnswer) {
+                    allQuestionsAnswered = false;
+                    // Показываем ошибку для этого вопроса
+                    document.getElementById(`error-${questionId}`).style.display = 'block';
+                    document.getElementById(`question-${questionId}`).classList.add('question-error');
+                }
+            }
+            
+            // Если не все вопросы отвечены - останавливаем выполнение
+            if (!allQuestionsAnswered) {
+                document.getElementById('result').innerHTML = '❌ Пожалуйста, ответьте на все вопросы';
+                document.getElementById('result').style.backgroundColor = '#fff3cd';
+                document.getElementById('result').style.color = '#856404';
+                return;
+            }
+            
+            // Если все вопросы отвечены - проверяем правильность
+            let correctCount = 0;
+            const totalQuestions = Object.keys(quizConfig).length;
+            
+            // Очистка предыдущей подсветки правильных/неправильных ответов
+            document.querySelectorAll('.question p').forEach(p => {
+                p.classList.remove('correct', 'incorrect');
+            });
+            
+            // Проверка каждого вопроса на правильность
+            for (const [questionId, questionConfig] of Object.entries(quizConfig)) {
+                const isCorrect = checkQuestion(questionId, questionConfig);
+				
+                if (isCorrect) {
+                    correctCount++;
+                }
+            }
+            
+            // Показ результата
+            showResult(correctCount, totalQuestions);
+        }
+        
+        function checkQuestion(questionId, questionConfig) {
+            const inputs = document.querySelectorAll(`input[name="${questionId}"]`);
+            let isCorrect = false;
+            
+            if (questionConfig.type === 'checkbox') {
+                const selectedAnswers = Array.from(document.querySelectorAll(`input[name="${questionId}"]:checked`))
+                    .map(input => input.value);
+                
+                const correctAnswers = questionConfig.correctAnswers;
+                isCorrect = selectedAnswers.length === correctAnswers.length &&
+                           selectedAnswers.every(answer => correctAnswers.includes(answer));
+                
+                // Подсветка ответов
+                inputs.forEach(input => {
+                    const parent = input.parentElement;
+                    if (correctAnswers.includes(input.value)) {
+                        parent.classList.add('correct');
+                    } else if (input.checked) {
+                        parent.classList.add('incorrect');
+                    }
+                });
+                
+            } else if (questionConfig.type === 'radio') {
+                const selectedAnswer = document.querySelector(`input[name="${questionId}"]:checked`);
+                isCorrect = selectedAnswer && questionConfig.correctAnswers.includes(selectedAnswer.value);
+                
+                // Подсветка ответов
+                inputs.forEach(input => {
+                    const parent = input.parentElement;
+                    if (questionConfig.correctAnswers.includes(input.value)) {
+                        parent.classList.add('correct');
+                    } else if (input.checked) {
+                        parent.classList.add('incorrect');
+                    }
+                });
+            }
+            
+            return isCorrect;
+        }
+        
+        function showResult(correctCount, totalQuestions) {
+            const resultDiv = document.getElementById('result');
+            const percentage = (correctCount / totalQuestions) * 100;
+            
+            resultDiv.innerHTML = `✅ Правильных ответов: ${correctCount} из ${totalQuestions}`;
+            
+            if (percentage === 100) {
+                resultDiv.style.backgroundColor = '#d4edda';
+                resultDiv.style.color = '#155724';
+            } else if (percentage >= 50) {
+                resultDiv.style.backgroundColor = '#fff3cd';
+                resultDiv.style.color = '#856404';
+            } else {
+                resultDiv.style.backgroundColor = '#f8d7da';
+                resultDiv.style.color = '#721c24';
+            }
+        }
+</script>
 </td>
 </tr>
 </table>
