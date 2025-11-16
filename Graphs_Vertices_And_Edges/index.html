@@ -75,7 +75,7 @@ p { text-indent: 20px; text-align: justify; }
 </tr>
 </table>
 
-<p>У всех этих схем есть общее - они показывают связи между отдельными элементами. В родословном дереве линия идёт от отца к сыну, схема молекулы показывает, в каком порядке связаны между собой атомы углерода, водорода и кислорода. На схеме метро связи - переходы и перегоны между соседними станциями, а радиосхема показывает, как соединить между собой радиодетали, чтобы получился работающий прибор.<br>Для изображения и изучения связей между различными объектами &mdash; предметами или понятиями &mdash; в математике применяется <strong>граф</strong>. Слово &laquo;граф&raquo; происходит от латинского слова graphica - рисование&raquo;, &laquo;черчение&raquo;.</p>
+<p>У всех этих схем есть общее - они показывают связи между отдельными элементами. В родословном дереве линия идёт от отца к сыну, схема молекулы показывает, в каком порядке связаны между собой атомы углерода, водорода и кислорода. На схеме метро связи - переходы и перегоны между соседними станциями, а радиосхема показывает, как соединить между собой радиодетали, чтобы получился работающий прибор.<br>Для изображения и изучения связей между различными объектами - предметами или понятиями - в математике применяется <strong>граф</strong>. Слово &laquo;граф&raquo; происходит от латинского слова graphica - &laquo;рисование&raquo;, &laquo;черчение&raquo;.</p>
 
 <table style="border-collapse: collapse; background: #FFEDE1; border: 1px solid black; table td {border: none;}" cellpadding="10" >
 <tr><td><img src="../img/book.png" width="32"/></td><td><strong>Граф</strong> - это изображение объектов и связей между ними с помощью точек и линий. Точки в графе называются <strong>вершинами графа</strong>. Некоторые (не обязательно все) вершины соединены линиями. Эти линии называются <strong>рёбрами графа</strong>.</td></tr>
@@ -179,6 +179,44 @@ p { text-indent: 20px; text-align: justify; }
 <p><input type="radio" name="q5" value="a4">Рёбер=3, Вершин=4, Изолированных вершин=3</p>
 <div id="error-q5" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
 </div>
+<div class="question" id="question-q6">
+<p>6. Одинаковы ли графы, изображённые на рисунке?</p>
+<table border="0" align="center"><tr><td><img src="img/questions_graph3.png"></td><td><img src="img/questions_graph4.png"></td></tr></table>
+<p><input type="radio" name="q6" value="a1">Да</p>
+<p><input type="radio" name="q6" value="a2">Нет</p>
+<p><input type="radio" name="q6" value="a3">Звонок другу</p>
+<p><input type="radio" name="q6" value="a4">Помощь зала</p>
+<p><input type="radio" name="q6" value="a5">50/50</p>
+<div id="error-q6" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
+</div>
+<div class="question" id="question-q7">
+<p>7. Одинаковы ли графы, изображённые на рисунке?</p>
+<table border="0" align="center"><tr><td><img src="img/questions_graph5.png"></td><td><img src="img/questions_graph6.png"></td></tr></table>
+<p><input type="radio" name="q7" value="a1">Подождите, я у них спрошу</p>
+<p><input type="radio" name="q7" value="a2">Ну и вопросики у вас!</p>
+<p><input type="radio" name="q7" value="a3">Одинаковостью тут и не пахнет</p>
+<p><input type="radio" name="q7" value="a4">Птичка на ушко напела, что они одинаковые</p>
+<div id="error-q7" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
+</div>
+<div class="question" id="question-q8">
+<p>8. На рисунке изображён граф. С помощью движения вершин нужно получить такое изображение этого графа, чтобы ребра не пересекались во внутренних
+точках (получатся два одинаковых графа).</p>
+<table border="0" align="center"><tr><td><img src="img/questions_graph7.png"></td></tr></table>
+<p>Выберите правильный ответ.</p>
+<table border="0" align="center">
+<tr>
+<td><p><input type="radio" name="q8" value="a1"><img src="img/questions_graph8.png" style="vertical-align: middle;"></p></td>
+<td width="150">&nbsp;</td>
+<td><p><input type="radio" name="q8" value="a2"><img src="img/questions_graph9.png" style="vertical-align: middle;"></p></td>
+</tr>
+<tr>
+<td><p><input type="radio" name="q8" value="a3"><img src="img/questions_grapha.png" style="vertical-align: middle;"></p></td>
+<td>&nbsp;</td>
+<td><p><input type="radio" name="q8" value="a4"><img src="img/questions_graphb.png" style="vertical-align: middle;"></p></td>
+</tr>
+<table>
+<div id="error-q8" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
+</div>
 <p><button type="button" onclick="checkAnswers()">Показать результат</button></p>
 <p><div id="result" class="result"></div></p>
 
@@ -193,6 +231,9 @@ p { text-indent: 20px; text-align: justify; }
 				q3: { t: 'r', c: [0x33] },
 				q4: { t: 'r', c: [0x33] },
 				q5: { t: 'r', c: [0x31] },
+				q6: { t: 'r', c: [0x31] },
+				q7: { t: 'r', c: [0x33] },
+				q8: { t: 'r', c: [0x33] },
             };
             
             // Функция декодирования
