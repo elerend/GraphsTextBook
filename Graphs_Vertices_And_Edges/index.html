@@ -156,8 +156,8 @@ p { text-indent: 20px; text-align: justify; }
 <div class="question" id="question-q3">
 <p>3. Как можно проверить, одинаковы два графа или нет?</p>
 <p><input type="radio" name="q3" value="a1">наложить изображения графов в одном масштабе друг на друга</p>
-<p><input type="radio" name="q3" value="a2">вычислить площади графов и если они равны, то и графы равны</p>
-<p><input type="radio" name="q3" value="a3">сравнить количество вершин и количество исходящих из каждой вершины рёбер</p>
+<p><input type="radio" name="q3" value="a2">вычислить площади графов S<sub>1</sub> и S<sub>2</sub> и, если S<sub>1</sub>=S<sub>2</sub>, то и сами графы равны</p>
+<p><input type="radio" name="q3" value="a3">попытаться мысленно передвинуть вершины одного так, чтобы совпали все связи</p>
 <p><input type="radio" name="q3" value="a4">прочитать мысли учителя и выбрать среди них правильный ответ</p>
 <p><div id="error-q3" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
 </div>
@@ -219,23 +219,18 @@ p { text-indent: 20px; text-align: justify; }
 </div>
 <div class="question" id="question-q9">
 <p>9. Каждый федеральный округ Российской Федерации объединяет несколько регионов, например областей или республик. Можно построить граф смежности, изображая регионы вершинами. Две вершины связаны ребром, если соответствующие регионы имеют участок сухопутной границы. На рисунке изображена карта Дальневосточного Федерального округа. Какой из графов соответствует графу смежности регионов?</p>
-<table border="0" align="center"><tr><td><img src="img/questions_graphc.png" width="450"></td></tr></table>
-<table border="0" align="center">
+<table border="0" align="center"><tr><td><img src="img/questions_graphc.png" width="400"></td></tr></table>
+<table border="1" align="center" cellpadding="0" cellspacing="0" style="border-color: #F9F9F9;">
 <tr>
-<td><p><input type="radio" name="q9" value="a1"><img src="img/questions_graph8.png" style="vertical-align: middle;"></p></td>
-<td width="150">&nbsp;</td>
-<td><p><input type="radio" name="q9" value="a2"><img src="img/questions_graph9.png" style="vertical-align: middle;"></p></td>
-</tr>
-<tr>
-<td><p><input type="radio" name="q9" value="a3"><img src="img/questions_grapha.png" style="vertical-align: middle;"></p></td>
-<td>&nbsp;</td>
-<td><p><input type="radio" name="q9" value="a4"><img src="img/questions_graphb.png" style="vertical-align: middle;"></p></td>
+<td style="vertical-align: middle; border-right-style: none;"><input type="radio" name="q9" value="a1"></td><td style="border-left-style: none;"><img src="img/questions_graphe.png"></td>
+<td style="vertical-align: middle; border-right-style: none;"><input type="radio" name="q9" value="a2"></td><td style="border-left-style: none;"><img src="img/questions_graphf.png"></td>
+<td style="vertical-align: middle; border-right-style: none;"><input type="radio" name="q9" value="a3"></td><td style="border-left-style: none;"><img src="img/questions_graphg.png"></td>
 </tr>
 <table>
 <div id="error-q9" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
 </div>
 <div class="question" id="question-q10">
-<p>10. Какой из графов соответствует графу смежности регионов для Приволжского Федерального округа?</p>
+<p>10. Каждый федеральный округ Российской Федерации объединяет несколько регионов, например областей или республик. Можно построить граф смежности, изображая регионы вершинами. Две вершины связаны ребром, если соответствующие регионы имеют участок сухопутной границы. Какой из графов соответствует графу смежности регионов для Приволжского Федерального округа?</p>
 <table border="0" align="center"><tr><td><img src="img/questions_graphd.png" width="450"></td></tr></table>
 <table border="0" align="center">
 <tr>
