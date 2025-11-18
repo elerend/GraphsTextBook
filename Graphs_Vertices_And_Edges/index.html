@@ -253,10 +253,8 @@ p { text-indent: 20px; text-align: justify; }
 <p><div id="result" class="result"></div></p>
 
 <script>
-               // Обфусцированная конфигурация правильных ответов
         const quizConfig = (function() {
-		
-            // Зашифрованные данные
+
             const data = {
                 q1: { t: 'c', c: [0x32, 0x33, 0x36] },
                 q2: { t: 'r', c: [0x32] },
@@ -266,14 +264,14 @@ p { text-indent: 20px; text-align: justify; }
 				q6: { t: 'r', c: [0x31] },
 				q7: { t: 'r', c: [0x33] },
 				q8: { t: 'r', c: [0x33] },
+				q9: { t: 'r', c: [0x32] },
+				q10:{ t: 'r', c: [0x32] },
             };
             
-            // Функция декодирования
             const decode = (hexArray) => {
                 return hexArray.map(hex => 'a' + String.fromCharCode(hex));
             };
             
-            // Расшифровываем конфигурацию
             const config = {};
             for (const [key, value] of Object.entries(data)) {
                 config[key] = {
@@ -288,7 +286,6 @@ p { text-indent: 20px; text-align: justify; }
         function checkAnswers() {
             let allQuestionsAnswered = true;
             
-            // Сбрасываем подсветку ошибок
             document.querySelectorAll('.question').forEach(question => {
                 question.classList.remove('question-error');
             });
@@ -296,28 +293,23 @@ p { text-indent: 20px; text-align: justify; }
                 error.style.display = 'none';
             });
             
-            // Проверяем каждый вопрос
             for (const questionId of Object.keys(quizConfig)) {
                 const inputs = document.querySelectorAll(`input[name="${questionId}"]`);
                 let hasAnswer = false;
                 
                 if (quizConfig[questionId].type === 'checkbox') {
-                    // Для чекбоксов - проверяем, что выбран хотя бы один
                     hasAnswer = Array.from(inputs).some(input => input.checked);
                 } else if (quizConfig[questionId].type === 'radio') {
-                    // Для радио-кнопок - проверяем, что выбран один
                     hasAnswer = Array.from(inputs).some(input => input.checked);
                 }
                 
                 if (!hasAnswer) {
                     allQuestionsAnswered = false;
-                    // Показываем ошибку для этого вопроса
                     document.getElementById(`error-${questionId}`).style.display = 'block';
                     document.getElementById(`question-${questionId}`).classList.add('question-error');
                 }
             }
             
-            // Если не все вопросы отвечены - останавливаем выполнение
             if (!allQuestionsAnswered) {
                 document.getElementById('result').innerHTML = '❌ Пожалуйста, ответьте на все вопросы';
                 document.getElementById('result').style.backgroundColor = '#fff3cd';
@@ -325,16 +317,13 @@ p { text-indent: 20px; text-align: justify; }
                 return;
             }
             
-            // Если все вопросы отвечены - проверяем правильность
             let correctCount = 0;
             const totalQuestions = Object.keys(quizConfig).length;
             
-            // Очистка предыдущей подсветки правильных/неправильных ответов
             document.querySelectorAll('.question p').forEach(p => {
                 p.classList.remove('correct', 'incorrect');
             });
             
-            // Проверка каждого вопроса на правильность
             for (const [questionId, questionConfig] of Object.entries(quizConfig)) {
                 const isCorrect = checkQuestion(questionId, questionConfig);
 				
@@ -343,7 +332,6 @@ p { text-indent: 20px; text-align: justify; }
                 }
             }
             
-            // Показ результата
             showResult(correctCount, totalQuestions);
         }
         
@@ -359,7 +347,6 @@ p { text-indent: 20px; text-align: justify; }
                 isCorrect = selectedAnswers.length === correctAnswers.length &&
                            selectedAnswers.every(answer => correctAnswers.includes(answer));
                 
-                // Подсветка ответов
                 inputs.forEach(input => {
                     const parent = input.parentElement;
                     if (correctAnswers.includes(input.value)) {
@@ -373,7 +360,6 @@ p { text-indent: 20px; text-align: justify; }
                 const selectedAnswer = document.querySelector(`input[name="${questionId}"]:checked`);
                 isCorrect = selectedAnswer && questionConfig.correctAnswers.includes(selectedAnswer.value);
                 
-                // Подсветка ответов
                 inputs.forEach(input => {
                     const parent = input.parentElement;
                     if (questionConfig.correctAnswers.includes(input.value)) {
