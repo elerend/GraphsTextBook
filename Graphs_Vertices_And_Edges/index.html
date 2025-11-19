@@ -1,56 +1,33 @@
 <html>
 <head>
-<style>
-h1 { text-align: center; color: #00A2E8; }
-p { text-indent: 20px; text-align: justify; }
-        .correct {
-            background-color: #d4edda;
-            color: #155724;
-        }
-        .incorrect {
-            background-color: #f8d7da;
-            color: #721c24;
-        }
-        .result {
-            margin-top: 20px;
-            padding: 15px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        .question {
-            margin-bottom: 20px;
-        }
-        .error {
-            color: #dc3545;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-        .question-error {
-            border-left: 3px solid #dc3545;
-            padding-left: 10px;
-        }
-</style>
+  <title>Теория графов</title>
+  <link rel="stylesheet" type="text/css" href="../img/styles.css">
 </head>
 
 <body>
 
-<table style="border-collapse: collapse; border: 0px;" cellpadding="20" width="700">
+<table style="border-collapse: collapse; border: 0px;" cellpadding="20" width="700" align="center">
 <tr>
 <td>
 
-<h1>Графы. Вершины и рёбра</h1>
+
+
+<table width="100%">
+<tr><td colspan="2" align="center">Государственное бюджетное общеобразовательное учреждение города Москвы<br/>&laquo;Школа № 1290&raquo;</td></tr>
+<tr><td colspan="2" height="100">&nbsp;</td></tr>
+<tr><td width="200"><img src="../img/1290.png" width="200"></td><td align="center" style="vertical-align: bottom;"><b>Электронный учебник «Теория графов»</b><br/>проектно-исследовательская работа по информатике</td></tr>
+<tr><td colspan="2" height="50">&nbsp;</td></tr>
+<tr><td colspan="2" align="right">Выполнила:<br/>ученица 7 &laquo;Б&raquo; класса<br/>Шишканова Алиса<br/>Руководитель:<br/>учитель информатики<br/>Чалоян Валентина Эдуардовна</td></tr>
+<tr><td colspan="2" height="100">&nbsp;</td></tr>
+<tr><td colspan="2" align="center">Москва 2026 год</td></tr>
+<tr><td colspan="2" height="150">&nbsp;</td></tr>
+</table>
+
+
+
+
+
+<h1>Графы. Вершины и рёбра<sup style="font-size:10pt; color: #000000; font-weight: normal;"><a href="index.html#lib1">1</a></sup></h1>
 
 <p>На рисунках изображены самые разные схемы.</p>
 
@@ -132,8 +109,10 @@ p { text-indent: 20px; text-align: justify; }
 <p>На старте два белых коня рядом, и два чёрных тоже рядом; а на финише цвета коней чередуются. Чтобы пройти от старта к финишу, в какой-то момент придётся поставить белого и чёрного коня на одно и то же поле, а это не разрешается шахматными правилами.</p>
 <p><b><font color="#00A2E8">Ответ:</font></b> нельзя.</p>
 <p>Как видите, иногда графы позволяют очень просто решать довольно хитрые и необычные задачи.</p>
+
 <form id="quizForm">
 <h1>Вопросы для самопроверки</h1>
+
 <div class="question" id="question-q1">
 <p>1. Выберите объекты и явления, которые можно представить в виде графа:</p>
 <p><input type="checkbox" name="q1" value="a1">аромат щей в тарелочке</p>
@@ -144,6 +123,7 @@ p { text-indent: 20px; text-align: justify; }
 <p><input type="checkbox" name="q1" value="a6">водопровод в жилом доме</p>
 <p><div id="error-q1" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
 </div>
+
 <div class="question" id="question-q2">
 <p>2. Выберите правильный ответ на вопрос "Как называются линии, связывающие вершины графа?":</p>
 <p><input type="radio" name="q2" value="a1">ноги</p>
@@ -153,6 +133,7 @@ p { text-indent: 20px; text-align: justify; }
 <p><input type="radio" name="q2" value="a5">пальцы</p>
 <p><div id="error-q2" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div>
 </div>
+
 <div class="question" id="question-q3">
 <p>3. Как можно проверить, одинаковы два графа или нет?</p>
 <p><input type="radio" name="q3" value="a1">наложить изображения графов в одном масштабе друг на друга</p>
@@ -161,6 +142,7 @@ p { text-indent: 20px; text-align: justify; }
 <p><input type="radio" name="q3" value="a4">прочитать мысли учителя и выбрать среди них правильный ответ</p>
 <p><div id="error-q3" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
 </div>
+
 <div class="question" id="question-q4">
 <p>4. На рисунке изображён граф. Сколько у него рёбер, вершин, изолированных вершин?</p>
 <table border="0" align="center"><tr><td><img src="img/questions_graph1.png"></td></tr></table>
@@ -170,6 +152,7 @@ p { text-indent: 20px; text-align: justify; }
 <p><input type="radio" name="q4" value="a4">Рёбер=5, Вершин=5, Изолированных вершин=1</p>
 <p><div id="error-q4" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
 </div>
+
 <div class="question" id="question-q5">
 <p>5. На рисунке изображён граф. Сколько у него рёбер, вершин, изолированных вершин?</p>
 <table border="0" align="center"><tr><td><img src="img/questions_graph2.png"></td></tr></table>
@@ -179,6 +162,7 @@ p { text-indent: 20px; text-align: justify; }
 <p><input type="radio" name="q5" value="a4">Рёбер=3, Вершин=4, Изолированных вершин=3</p>
 <div id="error-q5" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
 </div>
+
 <div class="question" id="question-q6">
 <p>6. Одинаковы ли графы, изображённые на рисунке?</p>
 <table border="0" align="center"><tr><td><img src="img/questions_graph3.png"></td><td><img src="img/questions_graph4.png"></td></tr></table>
@@ -189,6 +173,7 @@ p { text-indent: 20px; text-align: justify; }
 <p><input type="radio" name="q6" value="a5">50/50</p>
 <div id="error-q6" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
 </div>
+
 <div class="question" id="question-q7">
 <p>7. Одинаковы ли графы, изображённые на рисунке?</p>
 <table border="0" align="center"><tr><td><img src="img/questions_graph5.png"></td><td><img src="img/questions_graph6.png"></td></tr></table>
@@ -198,6 +183,7 @@ p { text-indent: 20px; text-align: justify; }
 <p><input type="radio" name="q7" value="a4">Птичка на ушко напела, что они одинаковые</p>
 <div id="error-q7" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
 </div>
+
 <div class="question" id="question-q8">
 <p>8. На рисунке изображён граф. С помощью движения вершин нужно получить такое изображение этого графа, чтобы ребра не пересекались во внутренних
 точках (получатся два одинаковых графа).</p>
@@ -214,9 +200,10 @@ p { text-indent: 20px; text-align: justify; }
 <td>&nbsp;</td>
 <td><p><input type="radio" name="q8" value="a4"><img src="img/questions_graphb.png" style="vertical-align: middle;"></p></td>
 </tr>
-<table>
+</table>
 <div id="error-q8" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
 </div>
+
 <div class="question" id="question-q9">
 <p>9. Каждый федеральный округ Российской Федерации объединяет несколько регионов, например областей или республик. Можно построить граф смежности, изображая регионы вершинами. Две вершины связаны ребром, если соответствующие регионы имеют участок сухопутной границы. На рисунке изображена карта Дальневосточного Федерального округа. Какой из графов соответствует графу смежности регионов?</p>
 <table border="0" align="center"><tr><td><img src="img/questions_graphc.png" width="400"></td></tr></table>
@@ -226,25 +213,8 @@ p { text-indent: 20px; text-align: justify; }
 <td style="vertical-align: middle; border-right-style: none;"><input type="radio" name="q9" value="a2"></td><td style="border-left-style: none;"><img src="img/questions_graphf.png"></td>
 <td style="vertical-align: middle; border-right-style: none;"><input type="radio" name="q9" value="a3"></td><td style="border-left-style: none;"><img src="img/questions_graphg.png"></td>
 </tr>
-<table>
+</table>
 <div id="error-q9" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
-</div>
-<div class="question" id="question-q10">
-<p>10. Каждый федеральный округ Российской Федерации объединяет несколько регионов, например областей или республик. Можно построить граф смежности, изображая регионы вершинами. Две вершины связаны ребром, если соответствующие регионы имеют участок сухопутной границы. Какой из графов соответствует графу смежности регионов для Приволжского Федерального округа?</p>
-<table border="0" align="center"><tr><td><img src="img/questions_graphd.png" width="450"></td></tr></table>
-<table border="0" align="center">
-<tr>
-<td><p><input type="radio" name="q10" value="a1"><img src="img/questions_graph8.png" style="vertical-align: middle;"></p></td>
-<td width="150">&nbsp;</td>
-<td><p><input type="radio" name="q10" value="a2"><img src="img/questions_graph9.png" style="vertical-align: middle;"></p></td>
-</tr>
-<tr>
-<td><p><input type="radio" name="q10" value="a3"><img src="img/questions_grapha.png" style="vertical-align: middle;"></p></td>
-<td>&nbsp;</td>
-<td><p><input type="radio" name="q10" value="a4"><img src="img/questions_graphb.png" style="vertical-align: middle;"></p></td>
-</tr>
-<table>
-<div id="error-q10" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
 </div>
 
 
@@ -252,145 +222,14 @@ p { text-indent: 20px; text-align: justify; }
 <p><button type="button" onclick="checkAnswers()">Показать результат</button></p>
 <p><div id="result" class="result"></div></p>
 
-<script>
-        const quizConfig = (function() {
+<script>const data = { q1: { t: 'c', c: [0x32, 0x33, 0x36] }, q2: { t: 'r', c: [0x32] }, q3: { t: 'r', c: [0x33] }, q4: { t: 'r', c: [0x33] }, q5: { t: 'r', c: [0x31] }, q6: { t: 'r', c: [0x31] }, q7: { t: 'r', c: [0x33] }, q8: { t: 'r', c: [0x33] }, q9: { t: 'r', c: [0x32] } };</script>
+<script src="../img/scripts.js"></script>
 
-            const data = {
-                q1: { t: 'c', c: [0x32, 0x33, 0x36] },
-                q2: { t: 'r', c: [0x32] },
-				q3: { t: 'r', c: [0x33] },
-				q4: { t: 'r', c: [0x33] },
-				q5: { t: 'r', c: [0x31] },
-				q6: { t: 'r', c: [0x31] },
-				q7: { t: 'r', c: [0x33] },
-				q8: { t: 'r', c: [0x33] },
-				q9: { t: 'r', c: [0x32] },
-				q10:{ t: 'r', c: [0x32] },
-            };
-            
-            const decode = (hexArray) => {
-                return hexArray.map(hex => 'a' + String.fromCharCode(hex));
-            };
-            
-            const config = {};
-            for (const [key, value] of Object.entries(data)) {
-                config[key] = {
-                    type: value.t === 'c' ? 'checkbox' : 'radio',
-                    correctAnswers: decode(value.c)
-                };
-            }
-            
-            return config;
-        })();
-        
-        function checkAnswers() {
-            let allQuestionsAnswered = true;
-            
-            document.querySelectorAll('.question').forEach(question => {
-                question.classList.remove('question-error');
-            });
-            document.querySelectorAll('.error').forEach(error => {
-                error.style.display = 'none';
-            });
-            
-            for (const questionId of Object.keys(quizConfig)) {
-                const inputs = document.querySelectorAll(`input[name="${questionId}"]`);
-                let hasAnswer = false;
-                
-                if (quizConfig[questionId].type === 'checkbox') {
-                    hasAnswer = Array.from(inputs).some(input => input.checked);
-                } else if (quizConfig[questionId].type === 'radio') {
-                    hasAnswer = Array.from(inputs).some(input => input.checked);
-                }
-                
-                if (!hasAnswer) {
-                    allQuestionsAnswered = false;
-                    document.getElementById(`error-${questionId}`).style.display = 'block';
-                    document.getElementById(`question-${questionId}`).classList.add('question-error');
-                }
-            }
-            
-            if (!allQuestionsAnswered) {
-                document.getElementById('result').innerHTML = '❌ Пожалуйста, ответьте на все вопросы';
-                document.getElementById('result').style.backgroundColor = '#fff3cd';
-                document.getElementById('result').style.color = '#856404';
-                return;
-            }
-            
-            let correctCount = 0;
-            const totalQuestions = Object.keys(quizConfig).length;
-            
-            document.querySelectorAll('.question p').forEach(p => {
-                p.classList.remove('correct', 'incorrect');
-            });
-            
-            for (const [questionId, questionConfig] of Object.entries(quizConfig)) {
-                const isCorrect = checkQuestion(questionId, questionConfig);
-				
-                if (isCorrect) {
-                    correctCount++;
-                }
-            }
-            
-            showResult(correctCount, totalQuestions);
-        }
-        
-        function checkQuestion(questionId, questionConfig) {
-            const inputs = document.querySelectorAll(`input[name="${questionId}"]`);
-            let isCorrect = false;
-            
-            if (questionConfig.type === 'checkbox') {
-                const selectedAnswers = Array.from(document.querySelectorAll(`input[name="${questionId}"]:checked`))
-                    .map(input => input.value);
-                
-                const correctAnswers = questionConfig.correctAnswers;
-                isCorrect = selectedAnswers.length === correctAnswers.length &&
-                           selectedAnswers.every(answer => correctAnswers.includes(answer));
-                
-                inputs.forEach(input => {
-                    const parent = input.parentElement;
-                    if (correctAnswers.includes(input.value)) {
-                        parent.classList.add('correct');
-                    } else if (input.checked) {
-                        parent.classList.add('incorrect');
-                    }
-                });
-                
-            } else if (questionConfig.type === 'radio') {
-                const selectedAnswer = document.querySelector(`input[name="${questionId}"]:checked`);
-                isCorrect = selectedAnswer && questionConfig.correctAnswers.includes(selectedAnswer.value);
-                
-                inputs.forEach(input => {
-                    const parent = input.parentElement;
-                    if (questionConfig.correctAnswers.includes(input.value)) {
-                        parent.classList.add('correct');
-                    } else if (input.checked) {
-                        parent.classList.add('incorrect');
-                    }
-                });
-            }
-            
-            return isCorrect;
-        }
-        
-        function showResult(correctCount, totalQuestions) {
-            const resultDiv = document.getElementById('result');
-            const percentage = (correctCount / totalQuestions) * 100;
-            
-            resultDiv.innerHTML = `✅ Правильных ответов: ${correctCount} из ${totalQuestions}`;
-            
-            if (percentage === 100) {
-                resultDiv.style.backgroundColor = '#d4edda';
-                resultDiv.style.color = '#155724';
-            } else if (percentage >= 50) {
-                resultDiv.style.backgroundColor = '#fff3cd';
-                resultDiv.style.color = '#856404';
-            } else {
-                resultDiv.style.backgroundColor = '#f8d7da';
-                resultDiv.style.color = '#721c24';
-            }
-        }
-</script>
+<p><b>Список литературы:</b></p>
+<ol>
+<li id="lib1">Математика. Вероятность и статистика : 7-9-е классы : базовый уровень : учебник : в 2 частях : Часть 1 / И. Р. Высоцкий, И. В. Ященко ; под ред. И. В. Ященко. - Москва : Просвещение, 2023.</li>
+</ol>
+
 </td>
 </tr>
 </table>

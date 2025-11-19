@@ -1,0 +1,54 @@
+h1
+{
+	text-align: center;
+	color: #00A2E8;
+}
+p
+{
+	text-indent: 20px; text-align: justify; }
+.correct
+{
+	background-color: #d4edda;
+	color: #155724;
+}
+.incorrect
+{
+	background-color: #f8d7da;
+	color: #721c24;
+}
+.result
+{
+	margin-top: 20px;
+	padding: 15px;
+	border-radius: 5px;
+	font-weight: bold;
+}
+button
+{
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+button:hover
+{
+	background-color: #0056b3;
+}
+.question
+{
+	margin-bottom: 20px;
+}
+.error
+{
+	color: #dc3545;
+	font-size: 14px;
+	margin-top: 5px;
+}
+.question-error
+{
+	border-left: 3px solid #dc3545;
+	padding-left: 10px;
+}
