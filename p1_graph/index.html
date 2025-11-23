@@ -12,12 +12,59 @@
 <tr>
 <td>
 
-<h1>Что такое граф?<sup style="font-size:10pt; color: #000000; font-weight: normal;"><a href="#lib1">1</a></sup></h1>
+<h1>Что такое граф?</h1>
 
-<p><b>Список литературы:</b></p>
-<ol>
-<li id="lib1">Математика. Вероятность и статистика : 7-9-е классы : базовый уровень : учебник : в 2 частях : Часть 1 / И. Р. Высоцкий, И. В. Ященко ; под ред. И. В. Ященко. - Москва : Просвещение, 2023.</li>
-</ol>
+<table style="border-collapse: collapse; background: #FFEDE1; border: 1px solid black; table td {border: none;}" cellpadding="10" >
+<tr><td><img src="../img/book.png" width="32"/></td><td><strong>Граф</strong> - это изображение объектов и связей между ними с помощью точек и линий.</td></tr>
+</table>
+
+<p>На рисунках изображены самые разные схемы.</p>
+
+<table border="0" cellpadding="10">
+<tr>
+<td style="vertical-align: top;">а) Часть родословного дерева потомков Николая Бернулли:<br/>
+<img src="img/bernulli_family_tree.png" width="350">
+</td>
+<td style="vertical-align: top;">
+б) Схема молекулы химического вещества (глицерина):<br/>
+<img src="img/molecule.png" width="350"><br/>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">в) Схема метро в Новосибирске (по состоянию на ноябрь 2025 г):<br/>
+<img src="img/novosibirsk_metro.png" width="350">
+</td>
+<td style="vertical-align: top;">
+г) Радиосхема простейшего радиоприёмника:<br/>
+<img src="img/circuit_diagram.png" width="350">
+</td>
+</tr>
+</table>
+
+<p>У всех этих схем есть общее - они показывают связи между отдельными элементами. В родословном дереве линия идёт от отца к сыну, схема молекулы показывает, в каком порядке связаны между собой атомы углерода, водорода и кислорода. На схеме метро связи - переходы и перегоны между соседними станциями, а радиосхема показывает, как соединить между собой радиодетали, чтобы получился работающий прибор.<br>Для изображения и изучения связей между различными объектами - предметами или понятиями - в математике применяется <strong>граф</strong>. Слово &laquo;граф&raquo; происходит от латинского слова graphica - &laquo;рисование&raquo;, &laquo;черчение&raquo;.</p>
+
+<form id="quizForm">
+
+<h1>Проверь себя</h1>
+
+<div class="question" id="question-q1">
+<p>Выберите объекты и явления, которые можно представить в виде графа:</p>
+<p><input type="checkbox" name="q1" value="a1">аромат щей в тарелочке</p>
+<p><input type="checkbox" name="q1" value="a2">схема уборки квартиры роботом-пылесосом</p>
+<p><input type="checkbox" name="q1" value="a3">нервная система человека</p>
+<p><input type="checkbox" name="q1" value="a4">нахождение ответа на вопрос, что было раньше, курица или яйцо?</p>
+<p><input type="checkbox" name="q1" value="a5">чувства восьмиклассницы во время истерики</p>
+<p><input type="checkbox" name="q1" value="a6">водопровод в жилом доме</p>
+<p><div id="error-q1" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
+</div>
+
+<p style="text-align: center;"><button type="button" onclick="checkAnswers()">Показать результат</button></p>
+<p><div id="result" class="result"></div></p>
+
+<script>const data = { q1: { t: 'c', c: [0x32, 0x33, 0x36] } };</script>
+<script src="../img/scripts.js"></script>
+
+</form>
 
 </td>
 </tr>

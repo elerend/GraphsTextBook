@@ -12,12 +12,67 @@
 <tr>
 <td>
 
-<h1>Одинаковость графов - проверь себя<sup style="font-size:10pt; color: #000000; font-weight: normal;"><a href="#lib1">1</a></sup></h1>
+<h1>Одинаковость графов - проверь себя</h1>
 
-<p><b>Список литературы:</b></p>
-<ol>
-<li id="lib1">Математика. Вероятность и статистика : 7-9-е классы : базовый уровень : учебник : в 2 частях : Часть 1 / И. Р. Высоцкий, И. В. Ященко ; под ред. И. В. Ященко. - Москва : Просвещение, 2023.</li>
-</ol>
+<form id="quizForm">
+
+<div class="question" id="question-q1">
+<p>1. Как можно проверить, одинаковы два графа или нет?</p>
+<p><input type="radio" name="q1" value="a1">наложить изображения графов в одном масштабе друг на друга</p>
+<p><input type="radio" name="q1" value="a2">вычислить площади графов S<sub>1</sub> и S<sub>2</sub> и, если S<sub>1</sub>=S<sub>2</sub>, то и сами графы равны</p>
+<p><input type="radio" name="q1" value="a3">попытаться мысленно передвинуть вершины одного так, чтобы совпали все связи</p>
+<p><input type="radio" name="q1" value="a4">прочитать мысли учителя и выбрать среди них правильный ответ</p>
+<p><div id="error-q1" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
+</div>
+
+<div class="question" id="question-q2">
+<p>2. Одинаковы ли графы, изображённые на рисунке?</p>
+<table border="0" align="center"><tr><td><img src="img/questions_graph3.png"></td><td><img src="img/questions_graph4.png"></td></tr></table>
+<p><input type="radio" name="q2" value="a1">Да</p>
+<p><input type="radio" name="q2" value="a2">Нет</p>
+<p><input type="radio" name="q2" value="a3">Звонок другу</p>
+<p><input type="radio" name="q2" value="a4">Помощь зала</p>
+<p><input type="radio" name="q2" value="a5">50/50</p>
+<div id="error-q2" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
+</div>
+
+<div class="question" id="question-q3">
+<p>3. Одинаковы ли графы, изображённые на рисунке?</p>
+<table border="0" align="center"><tr><td><img src="img/questions_graph5.png"></td><td><img src="img/questions_graph6.png"></td></tr></table>
+<p><input type="radio" name="q3" value="a1">Подождите, я у них спрошу</p>
+<p><input type="radio" name="q3" value="a2">Ну и вопросики у вас!</p>
+<p><input type="radio" name="q3" value="a3">Одинаковостью тут и не пахнет</p>
+<p><input type="radio" name="q3" value="a4">Птичка на ушко напела, что они одинаковые</p>
+<div id="error-q3" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
+</div>
+
+<div class="question" id="question-q4">
+<p>4. На рисунке изображён граф. С помощью движения вершин нужно получить такое изображение этого графа, чтобы ребра не пересекались во внутренних
+точках (получатся два одинаковых графа).</p>
+<table border="0" align="center"><tr><td><img src="img/questions_graph7.png"></td></tr></table>
+<p>Выберите правильный ответ.</p>
+<table border="0" align="center">
+<tr>
+<td><p><input type="radio" name="q4" value="a1"><img src="img/questions_graph8.png" style="vertical-align: middle;"></p></td>
+<td width="150">&nbsp;</td>
+<td><p><input type="radio" name="q4" value="a2"><img src="img/questions_graph9.png" style="vertical-align: middle;"></p></td>
+</tr>
+<tr>
+<td><p><input type="radio" name="q4" value="a3"><img src="img/questions_grapha.png" style="vertical-align: middle;"></p></td>
+<td>&nbsp;</td>
+<td><p><input type="radio" name="q4" value="a4"><img src="img/questions_graphb.png" style="vertical-align: middle;"></p></td>
+</tr>
+</table>
+<div id="error-q4" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
+</div>
+
+<p style="text-align: center;"><button type="button" onclick="checkAnswers()">Показать результат</button></p>
+<p><div id="result" class="result"></div></p>
+
+<script>const data = { q1: { t: 'r', c: [0x33] }, q2: { t: 'r', c: [0x31] }, q3: { t: 'r', c: [0x33] }, q4: { t: 'r', c: [0x33] } };</script>
+<script src="../img/scripts.js"></script>
+
+</form>
 
 </td>
 </tr>

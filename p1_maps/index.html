@@ -12,12 +12,39 @@
 <tr>
 <td>
 
-<h1>Превращаем карту в граф<sup style="font-size:10pt; color: #000000; font-weight: normal;"><a href="#lib1">1</a></sup></h1>
+<h1>Превращаем карту в граф</h1>
 
-<p><b>Список литературы:</b></p>
-<ol>
-<li id="lib1">Математика. Вероятность и статистика : 7-9-е классы : базовый уровень : учебник : в 2 частях : Часть 1 / И. Р. Высоцкий, И. В. Ященко ; под ред. И. В. Ященко. - Москва : Просвещение, 2023.</li>
-</ol>
+<p><b><font color="#00A2E8">ПРИМЕР.</font></b> В архипелаге шесть островов и шесть мостов: мост между островами Адуак и Бани, мост между островами Адуак и Видо, между островами Бани и Видо, между островами Екити и Гауту, между Бани и Джеми и между Видо и Джеми. Можно ли по мостам перейти с острова Адуака на остров Гауту?</p>
+<p>Построим граф. Острова изобразим вершинами, а мосты - рёбрами. Если нарисовать граф подходящим образом, то ответ очевиден: нельзя.</p>
+
+<table border="0" align="center">
+<tr><td><img src="img/graph5.png"></td></tr>
+</table>
+
+<form id="quizForm">
+
+<h1>Проверь себя</h1>
+
+<div class="question" id="question-q1">
+<p>Каждый федеральный округ Российской Федерации объединяет несколько регионов, например областей или республик. Можно построить граф смежности, изображая регионы вершинами. Две вершины связаны ребром, если соответствующие регионы имеют участок сухопутной границы. На рисунке изображена карта Дальневосточного Федерального округа. Какой из графов соответствует графу смежности регионов?</p>
+<table border="0" align="center"><tr><td><img src="img/questions_graphc.png" width="400"></td></tr></table>
+<table border="1" align="center" cellpadding="0" cellspacing="0" style="border-color: #F9F9F9;">
+<tr>
+<td style="vertical-align: middle; border-right-style: none;"><input type="radio" name="q1" value="a1"></td><td style="border-left-style: none;"><img src="img/questions_graphe.png"></td>
+<td style="vertical-align: middle; border-right-style: none;"><input type="radio" name="q1" value="a2"></td><td style="border-left-style: none;"><img src="img/questions_graphf.png"></td>
+<td style="vertical-align: middle; border-right-style: none;"><input type="radio" name="q1" value="a3"></td><td style="border-left-style: none;"><img src="img/questions_graphg.png"></td>
+</tr>
+</table>
+<div id="error-q1" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
+</div>
+
+<p style="text-align: center;"><button type="button" onclick="checkAnswers()">Показать результат</button></p>
+<p><div id="result" class="result"></div></p>
+
+<script>const data = { q1: { t: 'r', c: [0x32] } };</script>
+<script src="../img/scripts.js"></script>
+
+</form>
 
 </td>
 </tr>

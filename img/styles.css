@@ -5,7 +5,46 @@ h1
 }
 p
 {
-	text-indent: 20px; text-align: justify; }
+	text-indent: 20px;
+	text-align: justify;
+}
+
+.table_of_contents li
+{
+	margin: 0px 0px 20px -20px
+}
+
+/* ССЫЛКИ */
+
+A
+{
+	color: #00319c;
+	text-decoration: none;
+	font-weight: bold;
+	position: relative;
+	display: inline-block;
+	transition: all 0.3s ease;
+}
+A:visited
+{
+	color: #00319c;
+}
+A:active
+{
+	color: #00319c;
+}
+A:hover
+{
+	color: #00319c;
+	transform: translate(-2px, -2px);
+	text-shadow: 3px 3px 5px grey;
+}
+
+
+
+
+/* ТЕСТЫ */
+
 .correct
 {
 	background-color: #d4edda;
