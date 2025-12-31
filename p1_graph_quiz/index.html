@@ -31,20 +31,28 @@
 
 <td>
 
-<h1>Превращаем карту в граф</h1>
+<form id="quizForm">
 
-<div style="text-align:center;"><img src="img/aborigine.jpg" width="400"/></div><br/>
+<h1>Что такое граф? - проверь себя</h1>
 
-<p><b><font color="#00A2E8">ПРИМЕР.</font></b> В архипелаге шесть островов и шесть мостов: мост между островами Адуак и Бани, мост между островами Адуак и Видо, между островами Бани и Видо, между островами Екити и Гауту, между Бани и Джеми и между Видо и Джеми. Можно ли по мостам перейти с острова Адуака на остров Гауту?</p>
+<div class="question" id="question-q1">
+<p>Выберите объекты и явления, которые можно представить в виде графа:</p>
+<p><input type="checkbox" name="q1" value="a1">аромат щей в тарелочке</p>
+<p><input type="checkbox" name="q1" value="a2">схема уборки квартиры роботом-пылесосом</p>
+<p><input type="checkbox" name="q1" value="a3">нервная система человека</p>
+<p><input type="checkbox" name="q1" value="a4">нахождение ответа на вопрос, что было раньше, курица или яйцо?</p>
+<p><input type="checkbox" name="q1" value="a5">чувства восьмиклассницы во время истерики</p>
+<p><input type="checkbox" name="q1" value="a6">водопровод в жилом доме</p>
+<p><div id="error-q1" class="error" style="display: none;">Пожалуйста, выберите хотя бы один вариант</div></p>
+</div>
 
-<div style="text-align:center;"><img src="img/islands.jpg" width="600"/></div><br/>
+<p style="text-align: center;"><button type="button" onclick="checkAnswers()">Показать результат</button></p>
+<p><div id="result" class="result"></div></p>
 
-<p>Построим <span class="term">граф<span class="tooltip"><span class="term-title">Граф</span>Изображение объектов и связей между ними с помощью точек и линий.</span></span>. Острова изобразим вершинами, а мосты - рёбрами. Если нарисовать граф подходящим образом, то ответ очевиден: нельзя.</p>
+<script>const data = { q1: { t: 'c', c: [0x32, 0x33, 0x36] } };</script>
+<script src="../img/scripts.js"></script>
 
-<table border="0" align="center">
-<tr><td><img src="img/graph5.png"></td></tr>
-</table>
-
+</form>
 
 </td>
 </tr>
